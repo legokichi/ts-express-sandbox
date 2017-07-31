@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='./stylesheets/style.css' />
+    <script src="./socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+  <script>
+    const socket = io.connect(`${location.origin}/`);
+    socket.on("connect", ()=>{
+      socket.on('line', console.info.bind(console, "line") );
+      socket.on('echo', console.info.bind(console, "echo") );
+      socket.emit("echo", "hello");
+    });
+  </script>
+</html>

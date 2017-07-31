@@ -1,0 +1,38 @@
+{
+  "name": "ts-express-sandbox",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p ./",
+    "start": "tsc -p ./ && node ./lib/server.js",
+    "watch": "tsc -p ./ -w && forever start -w ./lib/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "commander": "^2.11.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "^2.5.7",
+    "express": "^4.15.3",
+    "forever": "^0.15.3",
+    "formidable": "^1.1.1",
+    "helmet": "^3.8.1",
+    "less-middleware": "^2.2.1",
+    "morgan": "^1.8.2",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.9.1",
+    "@types/cookie-parser": "^1.4.0",
+    "@types/express": "^4.0.36",
+    "@types/formidable": "^1.0.29",
+    "@types/helmet": "0.0.35",
+    "@types/less-middleware": "^2.0.29",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^8.0.17",
+    "@types/serve-favicon": "^2.2.28",
+    "@types/socket.io": "^1.4.29",
+    "typescript": "^2.4.2"
+  }
+}
